@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AllUpdate - সকল ক্যালকুলেটর ও ইসলামিক টুল</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    section {
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AllUpdate</h1>
+    <p>সকল হিসাব এক জায়গায় | হালাল ইনকাম ও ইসলামিক টুলস</p>
+  </header>
+
+  <section>
+    <h2>আজকের ইনকাম</h2>
+    <p>৳0.00 (ডেমো)</p>
+  </section>
+
+  <section>
+    <h2>যাকাত ক্যালকুলেটর</h2>
+    <label>মোট সম্পদ (৳):</label>
+    <input type="number" id="totalWealth" />
+    <label>মোট ঋণ (৳):</label>
+    <input type="number" id="totalDebt" />
+    <button onclick="calculateZakat()">যাকাত হিসাব করুন</button>
+    <div class="result" id="zakatResult"></div>
+  </section>
+
+  <section>
+    <h2>বয়স নির্ণয়</h2>
+    <label>জন্মতারিখ:</label>
+    <input type="date" id="birthDate" />
+    <button onclick="calculateAge()">বয়স দেখুন</button>
+    <div class="result" id="ageResult"></div>
+  </section>
+
+  <section>
+    <h2>ফারেনহাইট থেকে কেলভিন</h2>
+    <label>তাপমাত্রা (°F):</label>
+    <input type="number" id="fahrenheit" />
+    <button onclick="convertTemperature()">রূপান্তর করুন</button>
+    <div class="result" id="temperatureResult"></div>
+  </section>
+
+  <section>
+    <h2>ইসলামিক গল্প</h2>
+    <p>একবার এক সাহাবী রাসূলুল্লাহ (সা.)-কে জিজ্ঞেস করলেন, "সর্বোত্তম কাজ কোনটি?" তিনি বললেন, "নিয়মিতভাবে সালাত আদায় করা।"</p>
+  </section>
+
+  <section>
+    <h2>Google AdSense ইনকাম (ডেমো)</h2>
+    <p>আজকের আনুমানিক ইনকাম: $0.00</p>
+    <p>মাসিক মোট: $0.00</p>
+  </section>
+
+  <script>
+    function calculateZakat() {
+      let wealth = parseFloat(document.getElementById('totalWealth').value) || 0;
+      let debt = parseFloat(document.getElementById('totalDebt').value) || 0;
+      let net = wealth - debt;
+      let zakat = net > 0 ? net * 0.025 : 0;
+      document.getElementById('zakatResult').innerText = "যাকাত দিতে হবে: ৳" + zakat.toFixed(2);
+    }
+
+    function calculateAge() {
+      let birthDate = new Date(document.getElementById('birthDate').value);
+      let today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      let m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      document.getElementById('ageResult').innerText = "আপনার বয়স: " + age + " বছর";
+    }
+
+    function convertTemperature() {
+      let f = parseFloat(document.getElementById('fahrenheit').value) || 0;
+      let k = (f - 32) * 5/9 + 273.15;
+      document.getElementById('temperatureResult').innerText = "কেলভিন: " + k.toFixed(2);
+    }
+  </script>
+
+  <section>
+    <h2>ইনকামের উৎস ও পার্সেন্টেজ</h2>
+    <table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
+      <tr>
+        <th>উৎস</th>
+        <th>পার্সেন্টেজ</th>
+        <th>আজকের আয় (ডেমো)</th>
+      </tr>
+      <tr>
+        <td>Google AdSense</td>
+        <td>50%</td>
+        <td>$0.50</td>
+      </tr>
+      <tr>
+        <td>Affiliate Marketing</td>
+        <td>30%</td>
+        <td>$0.30</td>
+      </tr>
+      <tr>
+        <td>Product Sales</td>
+        <td>15%</td>
+        <td>$0.15</td>
+      </tr>
+      <tr>
+        <td>Others (Donations)</td>
+        <td>5%</td>
+        <td>$0.05</td>
+      </tr>
+    </table>
+    <p style="margin-top:10px;"><strong>মোট আয় (ডেমো):</strong> $1.00</p>
+  </section>
+
+</body>
+</html>
