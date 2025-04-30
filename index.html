@@ -112,6 +112,58 @@
       let k = (f - 32) * 5/9 + 273.15;
       document.getElementById('temperatureResult').innerText = "কেলভিন: " + k.toFixed(2);
     }
+
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllUpdate - ইসলামিক গল্প</title>
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        .story {
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>আজকের ইসলামিক গল্প</h1>
+    
+    <div class="story" id="dailyStory">
+        <!-- গল্প এখানে দেখানো হবে -->
+    </div>
+
+    <!-- JavaScript কোড এখানে বসান -->
+    <script>
+        // গল্পগুলো সংরক্ষণ
+        const stories = [
+            "গল্প ১: একবার এক আলিম তার ছাত্রকে বললেন...",
+            "গল্প ২: এক দানবীর ব্যক্তি যখন...",
+            "গল্প ৩: হযরত মুহাম্মদ (সা.)-এর জীবনের একটি গুরুত্বপূর্ণ ঘটনা...",
+            "গল্প ৪: সাহাবী এক ব্যক্তির উম্মাহর জন্য প্রার্থনা...",
+            // আরও গল্প যোগ করতে পারেন
+        ];
+
+        // বর্তমান তারিখ থেকে গল্প নির্বাচন করা
+        const today = new Date();
+        const storyIndex = today.getDate() % stories.length; // প্রতিদিন নতুন গল্প
+        
+        // গল্প প্রদর্শন করা
+        document.getElementById('dailyStory').textContent = stories[storyIndex];
+    </script>
+
+</body>
+</html>
   </script>
 
   <section>
