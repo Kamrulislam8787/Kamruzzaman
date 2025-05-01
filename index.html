@@ -103,7 +103,41 @@
       let k = (f - 32) * 5/9 + 273.15;
       document.getElementById('temperatureResult').innerText = "কেলভিন: " + k.toFixed(2);
     }
+function calculateAge() {
+      let cyear = parseInt(document.getElementById("cyear").value);
+      let cmonth = parseInt(document.getElementById("cmonth").value);
+      let cday = parseInt(document.getElementById("cday").value);
+      let byear = parseInt(document.getElementById("byear").value);
+      let bmonth = parseInt(document.getElementById("bmonth").value);
+      let bday = parseInt(document.getElementById("bday").value);
 
+      if (isNaN(cyear) || isNaN(cmonth) || isNaN(cday) || isNaN(byear) || isNaN(bmonth) || isNaN(bday)) {
+        document.getElementById("result").innerText = "সবগুলো ঘর পূরণ করুন।";
+        return;
+      }
+
+      let ageYear = cyear - byear;
+      let ageMonth = cmonth - bmonth;
+      let ageDay = cday - bday;
+
+      if (ageDay < 0) {
+        ageMonth--;
+        ageDay += 30;
+      }
+
+      if (ageMonth < 0) {
+        ageYear--;
+        ageMonth += 12;
+      }
+
+      if (ageYear < 0) {
+        document.getElementById("result").innerText = "তারিখ সঠিক নয়!";
+        return;
+      }
+
+      document.getElementById("result").innerText = `আপনার বয়স: ${ageYear} বছর ${ageMonth} মাস ${ageDay} দিন`;
+    }
+  
     <!DOCTYPE html>
 <html lang="bn">
 <head>
