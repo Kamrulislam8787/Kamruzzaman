@@ -7,12 +7,22 @@
   <title>AllUpdate - সকল ক্যালকুলেটর ও ইসলামিক টুল</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 20px;
-    }
+         body {
+            font-family: Poppins, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .story {
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    
     header {
       background-color: #4CAF50;
       color: white;
@@ -125,7 +135,7 @@
   </style>
 </head>
 <body>
-  <header>
+ <header>
     <h1>AllUpdate</h1>
     <p>সকল হিসাব এক জায়গায় | হালাল ইনকাম ও ইসলামিক টুলস</p>
       <p>Islamic Tools & Knowledge + General Calculators & Income</p>
@@ -188,9 +198,73 @@
     <p>একবার এক সাহাবী রাসূলুল্লাহ (সা.)-কে জিজ্ঞেস করলেন, "সর্বোত্তম কাজ কোনটি?" তিনি বললেন, "নিয়মিতভাবে সালাত আদায় করা।"</p>
   </section>
 
+    <h1>আজকের ইসলামিক গল্প</h1>
+    
+    <div class="story" id="dailyStory">
+        <!-- গল্প এখানে দেখানো হবে -->
+    </div>
 
+  <section>
+    <h2>ইনকামের উৎস ও পার্সেন্টেজ</h2>
+    <table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
+      <tr>
+        <th>উৎস</th>
+        <th>পার্সেন্টেজ</th>
+        <th>আজকের আয় (ডেমো)</th>
+      </tr>
+      <tr>
+        <td>Google AdSense</td>
+        <td>50%</td>
+        <td>$0.50</td>
+      </tr>
+      <tr>
+        <td>Affiliate Marketing</td>
+        <td>30%</td>
+        <td>$0.30</td>
+      </tr>
+      <tr>
+        <td>Product Sales</td>
+        <td>15%</td>
+        <td>$0.15</td>
+      </tr>
+      <tr>
+        <td>Others (Donations)</td>
+        <td>5%</td>
+        <td>$0.05</td>
+      </tr>
+    </table>
+    <p style="margin-top:10px;"><strong>মোট আয় (ডেমো):</strong> $1.00</p>
+  </section>
+<footer style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
+  <div>
+    <p>© 2025 AllUpdate - সমস্ত ইসলামিক ও প্রয়োজনীয় টুল এক জায়গায়</p>
+    <p>ডেভেলপার: Kamruzzaman Sardar | যোগাযোগ: your@email.com</p>
+    <p>
+      <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px;">Facebook</a>
+      <a href="https://youtube.com" target="_blank" style="color: #fff; margin: 0 10px;">YouTube</a>
+      <a href="mailto:your@email.com" style="color: #fff; margin: 0 10px;">ইমেইল করুন</a>
+    </p>
+  </div>
+</footer>
 
-  <script>
+      <!-- JavaScript কোড এখানে বসান -->
+    <script>
+        // গল্পগুলো সংরক্ষণ
+        const stories = [
+            "গল্প ১: একবার এক আলিম তার ছাত্রকে বললেন...",
+            "গল্প ২: এক দানবীর ব্যক্তি যখন...",
+            "গল্প ৩: হযরত মুহাম্মদ (সা.)-এর জীবনের একটি গুরুত্বপূর্ণ ঘটনা...",
+            "গল্প ৪: সাহাবী এক ব্যক্তির উম্মাহর জন্য প্রার্থনা...",
+            // আরও গল্প যোগ করতে পারেন
+        ];
+
+        // বর্তমান তারিখ থেকে গল্প নির্বাচন করা
+        const today = new Date();
+        const storyIndex = today.getDate() % stories.length; // প্রতিদিন নতুন গল্প
+        
+        // গল্প প্রদর্শন করা
+        document.getElementById('dailyStory').textContent = stories[storyIndex];
+ 
     function calculateZakat() {
       let wealth = parseFloat(document.getElementById('totalWealth').value) || 0;
       let debt = parseFloat(document.getElementById('totalDebt').value) || 0;
@@ -249,102 +323,7 @@ function calculateAge() {
 
       document.getElementById("result").innerText = `আপনার বয়স: ${ageYear} বছর ${ageMonth} মাস ${ageDay} দিন`;
     }
-  
-    <!DOCTYPE html>
-<html lang="bn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AllUpdate - ইসলামিক গল্প</title>
-    <style>
-        body {
-            font-family: Poppins, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-        }
-        .story {
-            padding: 20px;
-            background-color: #fff;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body>
-
-    <h1>আজকের ইসলামিক গল্প</h1>
     
-    <div class="story" id="dailyStory">
-        <!-- গল্প এখানে দেখানো হবে -->
-    </div>
-
-    <!-- JavaScript কোড এখানে বসান -->
-    <script>
-        // গল্পগুলো সংরক্ষণ
-        const stories = [
-            "গল্প ১: একবার এক আলিম তার ছাত্রকে বললেন...",
-            "গল্প ২: এক দানবীর ব্যক্তি যখন...",
-            "গল্প ৩: হযরত মুহাম্মদ (সা.)-এর জীবনের একটি গুরুত্বপূর্ণ ঘটনা...",
-            "গল্প ৪: সাহাবী এক ব্যক্তির উম্মাহর জন্য প্রার্থনা...",
-            // আরও গল্প যোগ করতে পারেন
-        ];
-
-        // বর্তমান তারিখ থেকে গল্প নির্বাচন করা
-        const today = new Date();
-        const storyIndex = today.getDate() % stories.length; // প্রতিদিন নতুন গল্প
-        
-        // গল্প প্রদর্শন করা
-        document.getElementById('dailyStory').textContent = stories[storyIndex];
     </script>
-
-</body>
-</html>
-  </script>
-
-  <section>
-    <h2>ইনকামের উৎস ও পার্সেন্টেজ</h2>
-    <table border="1" style="width:100%; border-collapse: collapse; text-align: left;">
-      <tr>
-        <th>উৎস</th>
-        <th>পার্সেন্টেজ</th>
-        <th>আজকের আয় (ডেমো)</th>
-      </tr>
-      <tr>
-        <td>Google AdSense</td>
-        <td>50%</td>
-        <td>$0.50</td>
-      </tr>
-      <tr>
-        <td>Affiliate Marketing</td>
-        <td>30%</td>
-        <td>$0.30</td>
-      </tr>
-      <tr>
-        <td>Product Sales</td>
-        <td>15%</td>
-        <td>$0.15</td>
-      </tr>
-      <tr>
-        <td>Others (Donations)</td>
-        <td>5%</td>
-        <td>$0.05</td>
-      </tr>
-    </table>
-    <p style="margin-top:10px;"><strong>মোট আয় (ডেমো):</strong> $1.00</p>
-  </section>
-<footer style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
-  <div>
-    <p>© 2025 AllUpdate - সমস্ত ইসলামিক ও প্রয়োজনীয় টুল এক জায়গায়</p>
-    <p>ডেভেলপার: Kamruzzaman Sardar | যোগাযোগ: your@email.com</p>
-    <p>
-      <a href="https://facebook.com" target="_blank" style="color: #fff; margin: 0 10px;">Facebook</a>
-      <a href="https://youtube.com" target="_blank" style="color: #fff; margin: 0 10px;">YouTube</a>
-      <a href="mailto:your@email.com" style="color: #fff; margin: 0 10px;">ইমেইল করুন</a>
-    </p>
-  </div>
-</footer>
-  
 </body>
 </html>
