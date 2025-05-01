@@ -62,11 +62,26 @@
   </section>
 
   <section>
-    <h2>বয়স নির্ণয়</h2>
-    <label>জন্মতারিখ:</label>
-    <input type="date" id="birthDate" />
-    <button onclick="calculateAge()">বয়স দেখুন</button>
-    <div class="result" id="ageResult"></div>
+      <div class="komo">
+    <div class="new">
+      <div class="label">বর্তমান তারিখ:</div>
+      <div class="input-group">
+        <input type="number" id="cyear" placeholder="বছর" />
+        <input type="number" id="cmonth" placeholder="মাস" />
+        <input type="number" id="cday" placeholder="দিন" />
+      </div>
+      <div class="label">জন্ম তারিখ:</div>
+      <div class="input-group">
+        <input type="number" id="byear" placeholder="বছর" />
+        <input type="number" id="bmonth" placeholder="মাস" />
+        <input type="number" id="bday" placeholder="দিন" />
+      </div>
+    </div>
+    <div class="neo">
+      <button id="btn" onclick="calculateAge()">Click</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
   </section>
 
   
