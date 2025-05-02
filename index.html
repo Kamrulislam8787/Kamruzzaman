@@ -14,6 +14,7 @@
             margin: 0;
             padding: 20px;
             text-align: center;
+            background:#222f3e;
         }
         .story {
             padding: 20px;
@@ -47,8 +48,12 @@ nav a {
   text-decoration:none
 }
     section {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       margin-top: 20px;
-      background: white;
+      background: yellow;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -62,16 +67,12 @@ nav a {
     
       
      .age{
-    display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+    
    }
 
     .komo {
       max-width: 500px;
       width: 100%;
-      background: #fff;
       padding: 20px;
     
     }
@@ -138,6 +139,7 @@ font-weight: bold;
       text-align: center;
     }
     
+    
    
  @media (max-width: 1024px) {
       .komo {
@@ -181,7 +183,7 @@ font-weight: bold;
     <div class="result" id="zakatResult"></div>
   </section>
 
-  <section class="age">
+  <section >
     <h2>বয়স নির্ণয়</h2>
       <div class="komo">
     <div class="new">
@@ -211,12 +213,13 @@ font-weight: bold;
     <h2>ইসলামিক গল্প</h2>
     <p>একবার এক সাহাবী রাসূলুল্লাহ (সা.)-কে জিজ্ঞেস করলেন, "সর্বোত্তম কাজ কোনটি?" তিনি বললেন, "নিয়মিতভাবে সালাত আদায় করা।"</p>
   </section>
-
+<section>
     <h1>আজকের ইসলামিক গল্প</h1>
     
     <div class="story" id="dailyStory">
         <!-- গল্প এখানে দেখানো হবে -->
     </div>
+    </section>
 
   <section>
     <h2>ইনকামের উৎস ও পার্সেন্টেজ</h2>
