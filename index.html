@@ -106,8 +106,7 @@
       text-align: center;
       border: 1px solid #ccc;
     }
-
-    .neo {
+.neo {
       display: flex;
       justify-content: center;
       margin-top: 20px;
@@ -129,6 +128,7 @@
       background: #222f3e;
     }
 
+    
     .result {
       margin-top: 20px;
       foid-size: 20px;
@@ -163,8 +163,8 @@
 <section>
     <h2>ফারেনহাইট থেকে কেলভিন</h2>
     <label>তাপমাত্রা (°F):</label>
-    <input type="number" id="fahrenheit" />
-    <button class="neo" onclick="convertTemperature()">রূপান্তর করুন</button>
+    <input type="number" id="fahrenheit" /><br>
+    <button onclick="convertTemperature()">রূপান্তর করুন</button>
     <div class="result" id="temperatureResult"></div>
   </section>
   <section>
@@ -172,8 +172,8 @@
     <label>মোট সম্পদ (৳):</label>
     <input type="number" id="totalWealth" />
     <label>মোট ঋণ (৳):</label>
-    <input type="number" id="totalDebt" />
-    <button class="neo" onclick="calculateZakat()">যাকাত হিসাব করুন</button>
+    <input type="number" id="totalDebt" /><br>
+    <button onclick="calculateZakat()">যাকাত হিসাব করুন</button>
     <div class="result" id="zakatResult"></div>
   </section>
 
